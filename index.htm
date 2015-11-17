@@ -38,10 +38,10 @@
 					<ul class="right topmenusecond topNavInner">
 						<li class="hide-on-med-and-down"><a href="#tool" data-activates="dropdowntool" class="dropdown-button">Tool<i class="material-icons right iconpoint">arrow_drop_down</i></a></li>
 						<li class="search"> <a href="#top" class="activeSearch"> <i class="material-icons iconpoint">search</i> </a></li>
-						<li class="hide-on-med-and-down"> <a href="#top"> <i class="material-icons iconpoint">perm_identity</i> </a></li>
+						<li class="hide-on-med-and-down"> <a href="#modallogin" class="modal-trigger"> <i class="material-icons iconpoint">perm_identity</i></a></li>
 					</ul>
 					<ul class="side-nav" id="mobile-demo">
-						<li><a class="" href="#modaltools">Login</a></li>
+						<li><a class="modal-trigger" href="#modallogin">Login</a></li>
 			        	<li><a href="http://www.flightradar24.com/15.93,104.49/6">Airplane</a></li>
 						<li><a href="http://maritech.com.vn/vi/ais-google/hoi-dap-ve-ais-google">Faq</a></li>
 						<li><a href="mailto:ais-service@maritech.com.vn">Feedback</a></li>
@@ -55,8 +55,8 @@
 		  	<nav id="search-nav" style="display:none;">
 		  		<div class="nav-wrapper lightblue accent-4 topNavInner">
 		  			<form id="search_mini_form" action="http://rdxsports.com/catalogsearch/result/" method="get">
-	        			<div class="input-field form-search topNavInner">
-		          			<input id="search" placeholder="MMSI, IMO or Name" type="text" class="input-text snize-input-style">
+	        			<div class="input-field topNavInner">
+		          			<input id="search" type="search" placeholder="MMSI, IMO or Name" type="text" class="input-text snize-input-style">
 		          			<label for="search"><i class="material-icons iconpoint">search</i></label>
 		          			<i class="material-icons closesearch iconpoint">close</i>
 						</div>
@@ -81,6 +81,42 @@
 			    	<h4>Tools</h4>
 			    	<p>A bunch of text</p>
 	    		</div>	    		
+  			</div>
+
+  			<!-- login form -->
+  			<div id="modallogin" class="modal">
+  				<div class="modal-content">	  
+  					<nav class="blue">
+  						<div class="nav-wrapper">
+  							<a href="#" class="brand-logo">Login</a>
+  							<ul class="right">
+  								<li><a href="#" class="button-close modal-action modal-close"><i class="material-icons">close</i></a></li>
+  							</ul>
+  						</div>
+  					</nav>   
+  				</div>
+  				<div class="model-email-content">	   			
+	      			<div class="row">
+					    <form class="col s12">
+					     	<div class="row">
+					        	<div class="input-field col s12">
+					          		<input id="email" type="email" class="validate">
+					          		<label for="email">Email</label>
+					        	</div>
+					      	</div>
+					      	<div class="row">
+					        	<div class="input-field col s12">
+					          		<input id="password" type="password" class="validate">
+					          		<label for="password">Password</label>
+					        	</div>
+					    	</div>
+					      
+					    </form>
+					  </div>
+	    		</div>
+			    <div class="modal-footer">
+			      	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+			    </div>
   			</div>
 		</header>
 	 	

@@ -10,14 +10,17 @@ i.left{
 i.right{
 	margin-left: 5px;
 }
-.nav-wrapper{
-	padding: 0 10px;
+.topnav .nav-wrapper{
+	padding: 0 0 0 10px;
 }
 
-.topnav,#search-nav,.side-nav li{
+.topnav,#search-nav{
 	height: 40px;
 }
-
+.side-nav li a{
+	height: 40px !important;
+    line-height: 40px !important
+}
 .topmenusecond {
     margin-left: 120px
 }
@@ -34,4 +37,16 @@ i.right{
 #search-nav{
 	position: absolute;
 	top: 40px;
+}
+
+/**************** login form ****************/
+#modallogin .modal-content{
+	padding: 0;
+}
+
+#modallogin .button-close{
+	padding: 0 15px;
+}
+#modallogin .brand-logo{
+	margin-left: 10px;
 }
