@@ -1,0 +1,37 @@
+nav{
+	background-color: #99ccff;
+}
+header{
+	position: relative;
+}
+i.left{
+	margin-right: 5px;
+}
+i.right{
+	margin-left: 5px;
+}
+.nav-wrapper{
+	padding: 0 10px;
+}
+
+.topnav,#search-nav,.side-nav li{
+	height: 40px;
+}
+
+.topmenusecond {
+    margin-left: 120px
+}
+.topNavInner {
+    line-height: 40px
+}
+.iconpoint {
+    height: 40px !important;
+    line-height: 40px !important
+}
+.topnav .brand-logo{
+	font-size: 1.5em;
+}
+#search-nav{
+	position: absolute;
+	top: 40px;
+}

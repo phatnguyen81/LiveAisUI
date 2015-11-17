@@ -1,0 +1,105 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+ 		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+		<link type="text/css" rel="stylesheet" href="styles.css"/>
+    </head>
+
+    <body>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<header>
+			<nav class="topnav">
+				<div class="nav-wrapper">
+					<a href="#!" class="brand-logo topNavInner">AIS Google</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons iconpoint">menu</i></a>
+					<ul class="left hide-on-med-and-down topmenusecond topNavInner">
+						<li><a href="http://www.flightradar24.com/15.93,104.49/6"><i class="material-icons left iconpoint tiny">navigation</i>Airplane</a></li>
+						<li><a href="http://maritech.com.vn/vi/ais-google/hoi-dap-ve-ais-google"><i class="material-icons left iconpoint">question_answer</i>Faq</a></li>
+						<li><a href="mailto:ais-service@maritech.com.vn"><i class="material-icons left iconpoint">chat_bubble_outline</i>Feedback</a></li>
+						<li><a class="modal-trigger" href="#modalpositions"><i class="material-icons left iconpoint">location_on</i>Positions</a></li>
+						<li><a class="modal-trigger" href="#modalutilities"><i class="material-icons left iconpoint">view_module</i>Utilities</a></li>
+					</ul>
+					<ul id="dropdowntool" class="dropdown-content">
+						<li><a href="#!">Vessel</a></li>
+						<li><a href="#!">Share Data</a></li>
+						<li><a href="#!">Bouy</a></li>
+					</ul>
+					<ul class="right topmenusecond topNavInner">
+						<li class="hide-on-med-and-down"><a href="#tool" data-activates="dropdowntool" class="dropdown-button">Tool<i class="material-icons right iconpoint">arrow_drop_down</i></a></li>
+						<li class="search"> <a href="#top" class="activeSearch"> <i class="material-icons iconpoint">search</i> </a></li>
+						<li class="hide-on-med-and-down"> <a href="#top"> <i class="material-icons iconpoint">perm_identity</i> </a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a class="" href="#modaltools">Login</a></li>
+			        	<li><a href="http://www.flightradar24.com/15.93,104.49/6">Airplane</a></li>
+						<li><a href="http://maritech.com.vn/vi/ais-google/hoi-dap-ve-ais-google">Faq</a></li>
+						<li><a href="mailto:ais-service@maritech.com.vn">Feedback</a></li>
+						<li><a class="modal-trigger" href="#modaltools">Tools</a></li>
+						<li><a class="modal-trigger" href="#modalpositions">Positions</a></li>
+						<li><a class="modal-trigger" href="#modalutilities">Utilities</a></li>
+			      	</ul>
+		    	</div>
+		  	</nav>
+
+		  	<nav id="search-nav" style="display:none;">
+		  		<div class="nav-wrapper lightblue accent-4 topNavInner">
+		  			<form id="search_mini_form" action="http://rdxsports.com/catalogsearch/result/" method="get">
+	        			<div class="input-field form-search topNavInner">
+		          			<input id="search" placeholder="MMSI, IMO or Name" type="text" class="input-text snize-input-style">
+		          			<label for="search"><i class="material-icons iconpoint">search</i></label>
+		          			<i class="material-icons closesearch iconpoint">close</i>
+						</div>
+					</form>
+				</div>
+			</nav>
+
+			<div id="modalpositions" class="modal bottom-sheet">
+    			<div class="modal-content">
+			    	<h4>List of positions</h4>
+			    	<p>A bunch of text</p>
+	    		</div>	    		
+  			</div>
+  			<div id="modalutilities" class="modal bottom-sheet">
+    			<div class="modal-content">
+			    	<h4>Utilities</h4>
+			    	<p>A bunch of text</p>
+	    		</div>	    		
+  			</div>
+  			<div id="modaltools" class="modal bottom-sheet">
+    			<div class="modal-content">
+			    	<h4>Tools</h4>
+			    	<p>A bunch of text</p>
+	    		</div>	    		
+  			</div>
+		</header>
+	 	
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".button-collapse").sideNav();
+				$('.modal-trigger').leanModal();
+			});
+			// display search bar slide down
+			$('.activeSearch').on('click', function() {
+				$('#search-nav').slideToggle('slow/400/fast');
+				$('#search').focus();
+			});
+			// close search bar slide
+			$('.closesearch').on('click', function() {
+				$('#search-nav').slideToggle('slow/400/fast');
+				$('#search').val('');
+			});
+		</script>
+    </body>
+  </html>
