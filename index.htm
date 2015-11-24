@@ -18,6 +18,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV0GOd8rYpjvPAQ6vmpIss_wPKyH8CC_A&libraries=places&sensor=TRUE"></script>
 		<header>
 			<nav class="topnav">
 				<div class="nav-wrapper">
@@ -100,12 +101,14 @@
 					    <form class="col s12">
 					     	<div class="row">
 					        	<div class="input-field col s12">
+					        		<i class="material-icons prefix">email</i>
 					          		<input id="email" type="email" class="validate">
 					          		<label for="email">Email</label>
 					        	</div>
 					      	</div>
 					      	<div class="row">
 					        	<div class="input-field col s12">
+					        		<i class="material-icons prefix">lock</i>
 					          		<input id="password" type="password" class="validate">
 					          		<label for="password">Password</label>
 					        	</div>
@@ -119,13 +122,38 @@
 			    </div>
   			</div>
 		</header>
+		<main>
+			<div class="rightmenu"> 
+				<a href="#" class="btn-floating btn-large waves-effect waves-light blue tooltipped" data-position="right" data-delay="50" data-tooltip="Filter">
+					<i class="material-icons">settings</i>
+				</a>
+			</div>
+			<div class="map_area" >
+				<div id="map-canvas"></div>
+			</div>
+		</main>
 	 	
+
 
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$(".button-collapse").sideNav();
 				$('.modal-trigger').leanModal();
+				$('.tooltipped').tooltip({delay: 50});
+				initMap();
+
+				$('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
 			});
+
+			function initMap() {
+			  // Create a map object and specify the DOM element for display.
+			  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+			    center: {lat: -34.397, lng: 150.644},
+			    scrollwheel: false,
+			    zoom: 8
+			  });
+			}
+
 			// display search bar slide down
 			$('.activeSearch').on('click', function() {
 				$('#search-nav').slideToggle('slow/400/fast');

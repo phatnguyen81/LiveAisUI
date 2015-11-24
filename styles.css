@@ -1,8 +1,27 @@
+html,body {
+	height: 100%;
+}
+
 nav{
 	background-color: #99ccff;
 }
 header{
 	position: relative;
+	overflow: visible;
+}
+main{
+	height: calc( 100% - 40px );
+	position: relative;
+}
+#map-canvas,.map_area{
+	height: 100%;
+	width: 100%;
+}
+#map-canvas{
+	overflow: initial !important; 
+}
+#search-nav{
+	z-index: 998;
 }
 i.left{
 	margin-right: 5px;
@@ -49,4 +68,18 @@ i.right{
 }
 #modallogin .brand-logo{
 	margin-left: 10px;
+}
+#modallogin .material-icons{
+	line-height: 56px;
+}
+#modallogin .row{
+	margin-bottom: 0px;
+}
+
+/**************** right menu ****************/
+.rightmenu{
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	overflow: visible;
 }
