@@ -17,6 +17,15 @@ main{
 	height: 100%;
 	width: 100%;
 }
+main>.row,main>.row>.col{
+	height: 100%
+}
+main>.row{
+	margin: 0;
+}
+main>.row>.col{
+	padding: 0;
+}
 #map-canvas{
 	overflow: initial !important; 
 }

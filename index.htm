@@ -4,7 +4,7 @@
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
- 		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,7 +16,7 @@
     <body>
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV0GOd8rYpjvPAQ6vmpIss_wPKyH8CC_A&libraries=places&sensor=TRUE"></script>
 		<header>
@@ -123,14 +123,29 @@
   			</div>
 		</header>
 		<main>
-			<div class="rightmenu"> 
-				<a href="#" class="btn-floating btn-large waves-effect waves-light blue tooltipped" data-position="right" data-delay="50" data-tooltip="Filter">
-					<i class="material-icons">settings</i>
+			<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+				<a class="btn-floating btn-large red tooltipped" data-position="left" data-delay="50" data-tooltip="I am tooltip">
+					<i class="large material-icons">settings</i>
 				</a>
+				<ul>
+					<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+					<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+					<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+					<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+			    </ul>
 			</div>
-			<div class="map_area" >
-				<div id="map-canvas"></div>
+			<div class="row">
+				<div class="col l10 s12 m9">
+					<div class="map_area" >
+						<div id="map-canvas"></div>
+					</div>
+      			</div>
+
+      			<div class="col l2 m3">
+
+      			</div>
 			</div>
+		
 		</main>
 	 	
 
@@ -140,9 +155,10 @@
 				$(".button-collapse").sideNav();
 				$('.modal-trigger').leanModal();
 				$('.tooltipped').tooltip({delay: 50});
+
+				  $(".button-collapse").sideNav();
 				initMap();
 
-				$('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
 			});
 
 			function initMap() {
