@@ -75,8 +75,8 @@ main>.row, main>.row>.col{
 	z-index: 998;
 }
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
-	height: 40px !important;
-    line-height: 40px !important
+	height: 40px;
+    line-height: 40px;
 }
 
 /**************** login form ****************/
@@ -96,6 +96,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 #modallogin .row{
 	margin-bottom: 0px;
 }
+#modallogin nav, #modallogin nav .nav-wrapper i, #modallogin nav a.button-collapse, #modallogin nav a.button-collapse i{
+	height: 64px;
+    line-height: 64px;
+}
 
 /**************** right panel ****************/
 #underwaylist,#anchorlist{
@@ -103,4 +107,17 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 }
 #underwaylist .collection,#anchorlist .collection{
 	margin: 0;
+}
+
+/**************** filter panel ****************/
+#filtermodel .collection-item:before{
+	background: url("images/sprite_medium.png") no-repeat 0 0 transparent;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 }

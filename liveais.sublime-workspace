@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"map",
+				"map-canvas"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			]
 		]
 	},
 	"buffers":
@@ -11,18 +19,15 @@
 			"file": "index.htm",
 			"settings":
 			{
-				"buffer_size": 1169,
+				"buffer_size": 9835,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "",
 			"file": "styles.css",
-			"file_size": 0,
-			"file_write_time": 130922217010000000,
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 2100,
 				"line_ending": "Unix"
 			}
 		}
@@ -59,10 +64,11 @@
 	},
 	"file_history":
 	[
+		"/Volumes/Data/GitHub/LiveAisUI/index.htm"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -102,23 +108,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1169,
+						"buffer_size": 9835,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								718,
-								1093
+								7915,
+								7915
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2451.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -130,15 +137,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 2100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1818,
+								1818
 							]
 						],
 						"settings":
@@ -146,7 +153,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 923.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -157,7 +164,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -194,7 +201,7 @@
 	"project": "liveais.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
